@@ -26,22 +26,22 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/projects/${id}`, { //this needs to be updated in All
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete project');
+      alert('Failed to delete project');//this needs to be updated
     }
   }
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-project-form')//this needs to be updated in both places
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.project-list')//this needs to be updated in both places
   .addEventListener('click', delButtonHandler);
