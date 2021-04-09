@@ -3,6 +3,7 @@ const { Post, User } = require('../models'); //updated to import post
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+  console.log('he');
   try {
     // Get all projects and JOIN with user data
     const postData = await Post.findAll({ //--------Updated to postData and Post.findAll
@@ -16,6 +17,8 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true })); //--------changed from project to post
+
+    console.log(posts);
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
