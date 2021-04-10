@@ -3,12 +3,13 @@ const { Post } = require('../../models'); //------changed to post
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
+  console.log("POST CALLED");
+  console.log(req.body, req.session.user_id);
   try {
     const newPost = await Post.create({ //------changed to post
       ...req.body,
       user_id: req.session.user_id,
     });
-    console.log(res.status);
     res.status(200).json(newPost); //------changed to post
   } catch (err) {
     res.status(400).json(err);
