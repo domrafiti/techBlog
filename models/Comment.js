@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-
-const sequelize = require('../../eCommerceBack/config/connection.js');
+const sequelize = require('../config/connection.js');
 
 class Comment extends Model { }
 
@@ -13,21 +12,13 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true
     },
-    comment_text: {
+    comment: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    date_created: {
-      type: DataTypes.DATE,
+    user_name: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
     },
     post_id: {
       type: DataTypes.INTEGER,
@@ -35,6 +26,11 @@ Comment.init(
         model: 'post',
         key: 'id',
       },
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
   },
   {

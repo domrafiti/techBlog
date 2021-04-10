@@ -1,32 +1,32 @@
 [
     {
-        "comment_text": "i LOVE music!!!",
-        "user_id": "1",
+        "comment": "i LOVE music!!!",
+        "user_name": "Sally",
         "post_id": "1"
     },
     {
         "comment": "Music is silly and shouldnt be listend to",
-        "user_id": "2",
+        "user_name": "Beth",
         "post_id": "1"
     },
     {
         "comment": "Quizzes are so much fun",
-        "user_id": "1",
+        "user_name": "Mary",
         "post_id": "2"
     },
     {
         "comment": "You should have more than 10 quesitons. I'm a master already",
-        "user_id": "3",
+        "user_name": "Martha",
         "post_id": "2"
     },
     {
         "comment": "your quiz is SO hard.",
-        "user_id": "1",
+        "user_name": "Johns",
         "post_id": "2"
     },
     {
         "comment": "ughhhhh whateverrrrr",
-        "user_id": "2",
+        "user_name": "Tuna",
         "post_id": "3"
     }
 ]

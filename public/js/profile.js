@@ -26,9 +26,10 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
+  console.log('clickity clack dont talk back');
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
-
+    console.log(id);
     const response = await fetch(`/api/posts/${id}`, { //this needs to be updated in All
       method: 'DELETE',
     });
@@ -45,6 +46,6 @@ document
   .getElementById('button-create')//this needs to be updated in both places
   .addEventListener('click', newFormHandler);
 
-// document
-//   .querySelector('project-list')//this needs to be updated in both places
-//   .addEventListener('click', delButtonHandler);
+document
+  .querySelector('.project-list')
+  .addEventListener('click', delButtonHandler);

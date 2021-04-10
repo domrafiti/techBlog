@@ -20,13 +20,8 @@ const seedDatabase = async () => {
     });
   }
 
-  const comments = await Comment.create(commentData);
+  const comm = await Comment.bulkCreate(commentData);
 
-  // const seedGallery = () => Gallery.bulkCreate(gallerydata);
-
-  // for (const comment of commentData) {
-  //   await Comment.create({ ...comment });
-  // }
 
   process.exit(0);
 };
