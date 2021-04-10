@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post } = require('../../models'); //------changed to post
 const withAuth = require('../../utils/auth');
 
+//working - tested- stable
 router.post('/', withAuth, async (req, res) => {
   console.log("POST CALLED");
   console.log(req.body, req.session.user_id);
@@ -16,7 +17,9 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+
 router.delete('/:id', withAuth, async (req, res) => {
+  console.log("DELETING LOG");
   try {
     const postData = await Post.destroy({ //------changed to post
       where: {

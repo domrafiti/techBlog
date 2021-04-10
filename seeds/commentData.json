@@ -1,0 +1,32 @@
+[
+    {
+        "comment_text": "i LOVE music!!!",
+        "user_id": "1",
+        "post_id": "1"
+    },
+    {
+        "comment": "Music is silly and shouldnt be listend to",
+        "user_id": "2",
+        "post_id": "1"
+    },
+    {
+        "comment": "Quizzes are so much fun",
+        "user_id": "1",
+        "post_id": "2"
+    },
+    {
+        "comment": "You should have more than 10 quesitons. I'm a master already",
+        "user_id": "3",
+        "post_id": "2"
+    },
+    {
+        "comment": "your quiz is SO hard.",
+        "user_id": "1",
+        "post_id": "2"
+    },
+    {
+        "comment": "ughhhhh whateverrrrr",
+        "user_id": "2",
+        "post_id": "3"
+    }
+]

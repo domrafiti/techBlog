@@ -13,9 +13,14 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true
     },
-    comment: {
+    comment_text: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -37,7 +42,7 @@ Comment.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'comment',
   }
 );
 
