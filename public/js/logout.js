@@ -14,7 +14,7 @@ const logout = async () => {
 const resetTimer = () => {
   let time = 0;
   clearTimeout(time);
-  time = setTimeout(logout, 30000)
+  time = setTimeout(logout, 15000)
 };
 
 const idleTime = () => {
@@ -23,7 +23,8 @@ const idleTime = () => {
   window.onload = resetTimer;
   document.onmousemove = resetTimer;
   document.onkeypress = resetTimer;
-  logout;
+
+  logout();
 
 };
 
