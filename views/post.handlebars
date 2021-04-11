@@ -2,14 +2,14 @@
   <h2>{{title}}</h2>
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <button class="btn btn-primary">Leave a Comment</button>
+  <p id="comment-button">
+    <button id="comment-button" class="btn btn-primary" type="submit">Leave a Comment</button>
   </p>
 </div>
 
 
 
-<div class="col-auto">
+<div class="col-auto" id="comment-form" display="hidden">
   <h3>Create a New Totally Rad Comment:</h3>
   <p></p>
   <form class="form new-comment-form">
@@ -26,6 +26,7 @@
     </div>
     <div class="form-group">
       <button id="button-create" type="submit" class="btn btn-primary">Leave my Words</button>
+      <button id="cancel-button" type="submit" class="btn btn-secondary">Cancel Comment</button>
     </div>
   </form>
 </div>
@@ -38,7 +39,8 @@
   <div class="card-body">
     <blockquote class="blockquote mb-0">
       <p>{{comment.comment}}</p>
-      <footer class="blockquote-footer">Words left by: <cite title="Source Title">{{user_name}}</cite></footer>
+      <footer class="blockquote-footer">Words left by: <cite title="Source Title">{{user_name}} on or around:
+          {{date_created}}</cite></footer>
     </blockquote>
   </div>
   {{/each}}

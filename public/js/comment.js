@@ -27,5 +27,18 @@ const newCommentHandler = async (event) => {
 };
 
 //consider buildling out hidden forms
+const showComment = () => {
+    document.querySelector('#comment-button').style.display = 'none';
+    document.querySelector('#comment-form').style.display = 'block';
+};
+
+const hideComment = () => {
+    document.querySelector('#comment-button').style.display = 'block';
+    document.querySelector('#comment-form').style.display = 'none';
+};
 
 document.querySelector('.new-comment-form').addEventListener('submit', newCommentHandler);
+
+document.querySelector('#comment-button').addEventListener('click', showComment);
+
+document.querySelector('#cancel-button').addEventListener('click', hideComment);
