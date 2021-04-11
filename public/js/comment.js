@@ -1,9 +1,12 @@
 const newCommentHandler = async (event) => {
     event.preventDefault();
 
-    const user_name = document.getElementById('').value.trim || "I'm a Ghost";
-    const comment = document.getElementById('').value.trim();
-    const post_id = document.getElementById('').value.trim();
+    const user_name = document.querySelector('#comment-user-name').value.trim() || "I'm a Ghost";
+    const comment = document.getElementById('comment-desc').value.trim();
+    const post_id = document.getElementById('post-id').value.trim();
+
+    console.log('getting here', user_name, comment, post_id);
+
 
     if (user_name && comment && post_id) {
         const response = await fetch(`/api/comment`, { //need to build out
@@ -25,4 +28,4 @@ const newCommentHandler = async (event) => {
 
 //consider buildling out hidden forms
 
-document.getElementById('').addEventListener('submit', newCommentHandler);
+document.querySelector('.new-comment-form').addEventListener('submit', newCommentHandler);

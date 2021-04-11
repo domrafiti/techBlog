@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models'); //updated to import post
+const { Post, User, Comment } = require('../models'); //updated to import post
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -38,10 +38,16 @@ router.get('/post/:id', async (req, res) => { //----need to change route
           model: User,
           attributes: ['name'],
         },
+        {
+          model: Comment,
+          attributes: ['user_name', 'comment', 'date_created']
+        },
       ],
     });
 
     const post = postData.get({ plain: true });
+
+    console.log(post);
 
     res.render('post', { //------tied to project.handlebars - updated file name to post.handlebars
       ...post,
